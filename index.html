@@ -49,20 +49,43 @@
                 <button class="btn" data-modal-open>Заказать услугу</button>
                     <div class="backdrop is-hidden" data-modal>
                         <div class="modal">
-                            <form class="js-speaker-form" action="">
+                            <form class="js-speaker-form form-options" action="">
                                 <p>оставьте свои данные, мы вам перезвоним</p>
-                                <label for="name">имя</label>
-                                <input type="text" name="name" id="name">
-                                
-                                <label for="tel">телефон</label>
-                                <input type="tel" name="tel" id="tel">
-                                
-                                <label for="mail">почта</label>
-                                <input type="mail" name="mail" id="mail">
-                                
-                                <textarea name="" id="" cols="20" rows="5">введите текст</textarea>
-                                соглашаюсь с рассылкой и принимаю условия договора
-                                <button type="submit" class="">отправить</button>
+                                <div class="form-option">
+                                    <label for="name">имя
+                                        <svg class="icon icon-phone">
+                                            <use href="./images/icons/sprite.svg#name"></use>
+                                        </svg>
+                                    </label>
+                                    <input type="text" name="name" id="name" class="form-field">
+                                </div>
+                                <div class="form-option">
+                                    <label for="tel">телефон
+                                        <svg class="icon icon-phone">
+                                            <use href="./images/icons/sprite.svg#tel"></use>
+                                        </svg>
+                                    </label>
+                                    <input type="tel" name="tel" id="tel" class="form-field">
+                                </div>
+                                <div class="form-option">
+                                    <label for="mail">почта
+                                        <svg class="icon icon-phone">
+                                            <use href="./images/icons/sprite.svg#mail"></use>
+                                        </svg>
+                                    </label>
+                                    <input type="mail" name="mail" id="mail" class="form-field">
+                                </div>
+                                <div class="form-option">
+                                    <label for="">введите текст</label>
+                                    <textarea name="" id="" cols="20" rows="5" class="form-field"></textarea>
+                                </div>
+                                <div class="form-option">
+                                    <input type="checkbox" name="policy" id="policy">
+                                    <label for="policy">соглашаюсь с рассылкой и принимаю условия договора</label>
+                                </div>
+                                <div class="form-btn">
+                                    <button type="submit" class="">отправить</button>
+                                </div>
                             </form>
                             <button class="btn-close"  data-modal-close>
                                 <svg class="icon icon-close">
@@ -425,7 +448,7 @@
                 .addEventListener('submit', e => {
                     e.preventDefault();
                     new FormData(e.currentTarget).forEach((value, name) =>
-                        console.log('${name}: ${value}'),
+                        console.log(`${name}: ${value}`),
                         );
                 });
         })();
