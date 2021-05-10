@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link type="text/css" rel="stylesheet" href="./css/normalize.css">
+    <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./images/icons/sprite.svg">
-    <link rel="stylesheet" href="./css/style.css">
+    <link type="text/css" rel="stylesheet" href="./css/variables.css">
+    <link type="text/css" rel="stylesheet" href="./images/icons/sprite.svg">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
     <title>Studio</title>
 </head>
 <body>
@@ -49,7 +49,7 @@
                 <button class="btn" data-modal-open>Заказать услугу</button>
                     <div class="backdrop is-hidden" data-modal>
                         <div class="modal">
-                            <form class="js-speaker-form form" action="">
+                            <form class="js-speaker-form form" action="#">
                                 <p>Оставьте свои данные, мы вам перезвоним</p>
                                 <div class="form-field">
                                     <label for="name" class="form-label">имя</label>
@@ -72,7 +72,7 @@
                                 <div class="form-field">
                                     <label for="mail" class="form-label">почта</label>
                                     <div class="form-input-svg">
-                                        <input type="mail" name="mail" id="mail" class="form-input">
+                                        <input type="email" name="mail" id="mail" class="form-input">
                                         <svg class="icon icon-mail">
                                             <use href="./images/icons/sprite.svg#mail"></use>
                                         </svg>
@@ -80,16 +80,16 @@
                                 </div>
                                 <div class="form-field">
                                     <label for="textarea" class="form-label">коментарий</label>
-                                    <textarea name="" id="textarea" cols="20" rows="8" class="form-textarea-input" placeholder="Введите текст"></textarea>
+                                    <textarea name="text" id="textarea" cols="20" rows="8" class="form-textarea-input" placeholder="Введите текст"></textarea>
                                 </div>
                                 <div class="form-checkbox">
                                     <label class="check-label">
                                         <input type="checkbox" name="policy" class="form-checkbox-input">
-                                        <div class="check-svg">
+                                        <span class="check-svg">
                                             <svg class="icon icon-check">
                                                 <use href="./images/icons/sprite.svg#check"></use>
                                             </svg>
-                                        </div>
+                                        </span>
                                         <span>соглашаюсь с рассылкой и принимаю</span>
                                         <span> <a href="" class="check-label-a">Условия договора</a></span>
                                     </label>
@@ -439,7 +439,7 @@
                     </li>
                 </ul>
             </div>
-            <form action="" class="footer-form">
+            <form action="url" class="footer-form">
                 <label for="subscribe" class="footer-form-label">Подпишитесь на рассылку</label>
                 <div class="footer-form-input-but">
                     <input type="text" name="name" id="subscribe" class="footer-form-input" placeholder="E-mail">
